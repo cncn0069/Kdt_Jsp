@@ -1,0 +1,42 @@
+<%@page import="java.sql.ResultSetMetaData"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="common.JDBCConnect"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+	JDBCConnect jdbc = new JDBCConnect();
+
+	jdbc.setSt(jdbc.getCon().createStatement());
+
+	ResultSet rs = jdbc.getSt().executeQuery("SELECT num,title,postdate,visitcount FROM board");
+	ResultSetMetaData mtrs = rs.getMetaData();
+
+	out.print("<table>");
+	out.print("<thead>");
+	out.print("<tr>");
+	for (int i = 0; i < mtrs.getColumnCount(); i++) {
+		out.print("<th>" + rs.getString("num") + "</th>");
+	}
+	out.print("</tr>");
+	out.print("</thead>");
+	out.print("<tbody>");
+	while (rs.next()) {
+		out.print("<tr>");
+		out.print("<td>" + rs.getString("num") + "</td>");
+		out.print("<td>" + rs.getString("title") + "</td>");
+		out.print("<td>" + rs.getString("postdate") + "</td>");
+		out.print("<td>" + rs.getString("visitcount") + "</td><br>");
+		out.print("</tr>");
+	}
+	out.print("</tbody>");
+	out.print("</table>");
+	%>
+</body>
+</html>

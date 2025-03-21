@@ -1,0 +1,16 @@
+127.0.0.1 - - [11/Mar/2025:17:06:30 +0900] "GET / HTTP/1.1" 404 808
+0:0:0:0:0:0:0:1 - - [11/Mar/2025:17:06:31 +0900] "GET /JSPMission/Mission/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94.jsp HTTP/1.1" 200 128
+127.0.0.1 - - [11/Mar/2025:17:11:09 +0900] "GET / HTTP/1.1" 404 808
+0:0:0:0:0:0:0:1 - - [11/Mar/2025:17:11:10 +0900] "GET /JSPMission/Mission/GCD.jsp HTTP/1.1" 200 372
+0:0:0:0:0:0:0:1 - - [11/Mar/2025:17:11:11 +0900] "GET /JSPMission/Mission/GCD.jsp? HTTP/1.1" 200 372
+0:0:0:0:0:0:0:1 - - [11/Mar/2025:17:11:14 +0900] "GET /JSPMission/Mission/GCD.jsp? HTTP/1.1" 200 372
+127.0.0.1 - - [11/Mar/2025:19:38:04 +0900] "GET / HTTP/1.1" 404 808
+0:0:0:0:0:0:0:1 - - [11/Mar/2025:19:38:05 +0900] "GET /JSPMission/Mission/GCD.jsp HTTP/1.1" 200 750
+0:0:0:0:0:0:0:1 - - [11/Mar/2025:19:38:07 +0900] "POST /JSPMission/Mission/GCD.jsp HTTP/1.1" 200 750
+0:0:0:0:0:0:0:1 - - [11/Mar/2025:19:38:16 +0900] "POST /JSPMission/Mission/GCD.jsp HTTP/1.1" 200 749
+0:0:0:0:0:0:0:1 - - [11/Mar/2025:19:38:19 +0900] "GET /JSPMission/Mission/GCD.jsp?number1=1&number2=2&GCD=0&LCM=0 HTTP/1.1" 200 749
+0:0:0:0:0:0:0:1 - - [11/Mar/2025:19:50:30 +0900] "GET /JSPMission/Mission/GCD.jsp HTTP/1.1" 500 2582
+0:0:0:0:0:0:0:1 - - [11/Mar/2025:19:52:28 +0900] "GET /JSPMission/Mission/GCD.jsp HTTP/1.1" 200 837
+0:0:0:0:0:0:0:1 - - [11/Mar/2025:19:52:36 +0900] "POST /JSPMission/Mission/GCD.jsp HTTP/1.1" 200 838
+0:0:0:0:0:0:0:1 - - [11/Mar/2025:19:52:52 +0900] "POST /JSPMission/Mission/GCD.jsp HTTP/1.1" 500 2684
+0:0:0:0:0:0:0:1 - - [11/Mar/2025:19:53:12 +0900] "POST /JSPMission/Mission/GCD.jsp HTTP/1.1" 200 838

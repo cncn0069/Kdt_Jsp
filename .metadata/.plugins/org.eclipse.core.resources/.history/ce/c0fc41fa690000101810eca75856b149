@@ -1,0 +1,8 @@
+package common;
+
+public class MemberDAO extends JDBCConnect{
+	public MemberDAO(String uid, String upass) {
+		MemberDTO dto = new MemberDTO();
+		String query = "SELECT * FROM member WHERE id=? AND pass=?";
+	}
+}

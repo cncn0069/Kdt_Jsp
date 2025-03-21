@@ -1,0 +1,42 @@
+package common;
+
+public class IdInfo {
+	private String id;
+	private String name;
+	private String pass;
+	
+	
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(int name) {
+		this.name = name;
+	}
+	public String getPass() {
+		return pass;
+	}
+	public void setPass(int pass) {
+		this.pass = pass;
+	}
+	public IdInfo(int id, int name, int pass) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.pass = pass;
+	}
+	public IdInfo()
+	{
+		private String id = 0;
+		private String name;
+		private String pass;
+	}
+	
+	
+}

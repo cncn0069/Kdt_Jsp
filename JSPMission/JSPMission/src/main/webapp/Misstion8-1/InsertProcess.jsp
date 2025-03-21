@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="common.IdInfo"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	List<IdInfo> idList = (ArrayList<IdInfo>)session.getAttribute("idList");
+
+	String id = request.getParameter("id");
+	String name = request.getParameter("name");
+	String pass = request.getParameter("pass");
+
+	if (id == null || id.trim().length() == 0 ||
+		name == null || name.trim().length() == 0 ||
+		pass == null || pass.trim().length() == 0) {
+		response.sendRedirect("InsertForm.jsp?errmsg=invadlidData");
+		return;
+	}
+	
+	for(IdInfo info : idList)
+	{
+		//아이디가 있다면 ..
+		if(info.getId().equals(id))
+		{
+			response.sendRedirect("InsertForm.jsp?errmsg=DuplicateError");
+			return;
+		}
+	}
+	//없다면
+	idList.add(new IdInfo(id,name,pass));
+	response.sendRedirect("InsertSuccess.jsp");
+%>
+</body>
+</html>

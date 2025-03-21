@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="MinBill.jsp" method="post">
+		<label for="bill">지불금액:</label> 
+		<input type="text" id="bill"
+			name="bill" value="" placeholder="숫자를 입력하세요"> <br>
+		
+		<label for="bagain">할인금액:</label> 
+		<input type="text" id="bagain" name="bagain" value="0" readonly><br>
+		
+		<label for="5B">오만원권:</label> 
+		<input type="text" id="5B" name="5B" value="" readonly><br>
+		
+		<label for="1B">일만원권:</label> 
+		<input type="text" id="1B" name="1B" value="" readonly><br>
+			
+		<label for="5T">오천원권:</label> 
+		<input type="text" id="5T" name="5T" value="" readonly><br>
+		
+		<label for="1T">일천원권:</label> 
+		<input type="text" id="1T" name="1T" value="" readonly><br>
+			
+		<input type="submit" value="Submit">
+	</form>
+	<%
+		int bill = 	Integer.parseInt(request.getParameter("bill"));
+		
+		int barGain = bill%100;
+	
+		int fiveB = bill/50000;
+		bill = bill - (fiveB*50000);
+		
+		int oneB = bill/10000;
+		bill = bill - (oneB*10000);
+		
+		int fiveT = bill/5000;
+		bill = bill - (fiveT*5000);
+		
+		int oveT = bill/1000;
+		
+	%>
+	
+</body>
+</html>

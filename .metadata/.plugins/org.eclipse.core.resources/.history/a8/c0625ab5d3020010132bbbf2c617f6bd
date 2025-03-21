@@ -1,0 +1,22 @@
+<%@page import="model1.board.BoardDAO"%>
+<%@page import="model1.board.BoardDTO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%
+String num = request.getParameter("num");
+
+BoardDAO dao = new BoardDAO(application);
+dao.updateVisitCount(num);
+BoardDTO dto = dao.selectView(num);
+
+%>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

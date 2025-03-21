@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="MinBill.jsp" method="post">
+		<label for="number1">지불금액:</label> 
+		<input type="text" id="number1"
+			name="number1" value="" placeholder="숫자를 입력하세요"> <br>
+		
+		<label for="bagain">할인금액:</label> 
+		<input type="text" id="bagain" name="bagain" value="0" readonly><br>
+		
+		<label for="5B">오만원권:</label> 
+		<input type="text" id="5B" name="5B" value="0" readonly><br>
+		
+		<label for="1B">일만원권:</label> 
+		<input type="text" id="1B" name="1B" value="0" readonly><br>
+			
+		<label for="5T">오천원권</label> 
+		<input type="text" id="5T" name="5T" value="0" readonly><br>
+		
+		<label for="1T">일천원권</label> 
+		<input type="text" id="1T" name="1T" value="0" readonly><br>
+			
+
+		<input type="submit" value="Submit">
+	</form>
+	
+	
+</body>
+</html>

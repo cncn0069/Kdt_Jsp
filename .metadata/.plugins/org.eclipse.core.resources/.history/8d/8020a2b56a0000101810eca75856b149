@@ -1,0 +1,22 @@
+package common;
+
+public class MemberDAO extends JDBCConnect{
+	public MemberDAO(String uid, String upass) {
+		MemberDTO dto = new MemberDTO();
+		String query = "SELECT * FROM member WHERE id=? AND pass=?";
+		
+		
+		try {
+			JDBCConnect jdbc = new JDBCConnect();
+			
+			jdbc.setPsmt(jdbc.getCon().prepareStatement(query));
+			jdbc.getPsmt().setString(1, uid);
+			jdbc.getPsmt().setString(2, upass);
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+}

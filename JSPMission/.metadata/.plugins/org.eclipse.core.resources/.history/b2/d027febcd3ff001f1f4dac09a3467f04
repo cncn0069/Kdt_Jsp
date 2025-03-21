@@ -1,0 +1,37 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="common.JDBCConnect"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<%
+String id = null;
+
+if(id != null)
+{
+	JDBCConnect jdbc = new JDBCConnect();
+	
+	jdbc.setSt(jdbc.getCon().createStatement());
+	
+	ResultSet rs = jdbc.getSt().executeQuery("SELECT id FROM member");
+	
+	out.print("<select name=\"ids\" id=\"ids\">");
+	
+	while(rs.next())
+	{
+		out.print("<option value=\""+rs.getString("id")+"\">사과</option>");
+	}
+	
+	out.print("</select>");
+}
+
+
+%>
+</body>
+</html>

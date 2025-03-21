@@ -1,0 +1,9 @@
+package common;
+
+public class IdInfo {
+	private int id;
+	private int name;
+	private int pass;
+	
+	
+}
